@@ -3,6 +3,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    watchOptions: {
+        poll: 100,
+    },
     mode: 'none',
     entry: {
         app: path.join(__dirname, 'src', 'index.tsx')

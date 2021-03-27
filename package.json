@@ -1,13 +1,10 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build:dev": "NODE_ENV=development webpack",
+    "build:prod": "NODE_ENV=production SENTRY=yes webpack",
+    "watch": "NODE_ENV=development webpack -- --watch"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "webpack"
-  ],
   "license": "ISC",
   "dependencies": {
     "react": "^16.12.0",
