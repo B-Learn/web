@@ -1,5 +1,6 @@
 import React from "react";
 import {HeaderWrapper} from "./styled/HeaderWrapper";
+import {Link} from "react-router-dom";
 
 export class Header extends React.Component<{}, {}> {
     render() {
@@ -7,7 +8,7 @@ export class Header extends React.Component<{}, {}> {
             <div className="wrap">
                 <div className="content">
                     <div className="logo">
-                        <h2><a href="#">B-Learn</a></h2>
+                        <h2><Link to="/">B-Learn</Link></h2>
                     </div>
                     <div className="search">
                         <div className="search_content">
@@ -20,8 +21,8 @@ export class Header extends React.Component<{}, {}> {
                     <div className="menu">
                         <div className="menu_content">
                             <div className="links">
-                                <a href="#">Login</a>
-                                <a href="#">Register</a>
+                                <Link to="/login">Login</Link>
+                                <Link to="/register">Register</Link>
                             </div>
                         </div>
                     </div>
