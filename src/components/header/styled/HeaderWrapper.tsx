@@ -20,6 +20,11 @@ export const HeaderWrapper = styled.header`
     position: relative;
     z-index: 10;
     background-color: #fff;
+    
+    @media screen and (min-width: 640px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .content {
