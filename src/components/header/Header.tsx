@@ -2,7 +2,7 @@ import React from "react";
 import {HeaderWrapper} from "./styled/HeaderWrapper";
 import {Link} from "react-router-dom";
 
-export class Header extends React.Component<{}, {}> {
+export class Header extends React.Component<any, any> {
     render() {
         return <HeaderWrapper>
             <div className="wrap">

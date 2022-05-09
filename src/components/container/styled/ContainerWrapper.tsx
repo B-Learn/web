@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const ContainerWrapper = styled.div`
+type Props = {
+    width?: string
+}
+
+export const ContainerWrapper = styled.div<Props>`
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  width: 100%;
+  width: ${(props: Props) => props.width || 100}%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1140px;
