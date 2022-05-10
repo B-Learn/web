@@ -1,10 +1,13 @@
-import React from "react";
+import React, {SyntheticEvent} from "react";
 import {FormWrapper} from "./styled/FormWrapper";
 
-export class Form extends React.Component<any, any> {
-    render() {
-        return <FormWrapper>
-            {this.props.children}
-        </FormWrapper>;
-    }
+type FormProps = {
+    onSubmit: (event: SyntheticEvent) => void
+    children?: React.ReactNode
+}
+
+export function Form(props: FormProps): JSX.Element {
+    return <FormWrapper onSubmit={props.onSubmit}>
+        {props.children}
+    </FormWrapper>;
 }
