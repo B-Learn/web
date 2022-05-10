@@ -1,7 +1,7 @@
 import React, {SyntheticEvent} from "react";
 import {FormWrapper} from "./styled/FormWrapper";
 
-type FormProps = {
+interface FormProps {
     onSubmit: (event: SyntheticEvent) => void
     children?: React.ReactNode
 }
@@ -9,5 +9,5 @@ type FormProps = {
 export function Form(props: FormProps): JSX.Element {
     return <FormWrapper onSubmit={props.onSubmit}>
         {props.children}
-    </FormWrapper>;
+    </FormWrapper>
 }

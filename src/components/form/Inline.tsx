@@ -1,10 +1,12 @@
 import React from "react";
 import {InlineWrapper} from "./styled/InlineWrapper";
 
-export class Inline extends React.Component<any, any> {
-    render() {
-        return <InlineWrapper>
-            {this.props.children}
-        </InlineWrapper>
-    }
+interface InlineProps {
+    children?: any
+}
+
+export function Inline(props: InlineProps): JSX.Element {
+    return <InlineWrapper>
+        {props.children}
+    </InlineWrapper>
 }

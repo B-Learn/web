@@ -1,12 +1,10 @@
 import React from "react";
 import {SubmitWrapper} from "./styled/SubmitWrapper";
 
-type SubmitProp = {
+interface SubmitProps {
     value: string
 }
 
-export class Submit extends React.Component<SubmitProp, any> {
-    render() {
-        return <SubmitWrapper type="submit" value={this.props.value}/>
-    }
+export function Submit(props: SubmitProps): JSX.Element {
+    return <SubmitWrapper type="submit" value={props.value}/>
 }

@@ -9,10 +9,10 @@ import {SectionWrapper} from "../section/styled/SectionWrapper";
 import {Indent} from "../indent/Indent";
 import {Title} from "../title/Title";
 
-export function Login() : JSX.Element {
+export function Login(): JSX.Element {
     function onSubmit(event: SyntheticEvent) {
         event.preventDefault()
-        // alert('clicked')
+        alert('clicked')
     }
 
     return <LoginPage>

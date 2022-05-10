@@ -4,14 +4,12 @@ import {ContainerWrapper} from "../container/styled/ContainerWrapper";
 import {Title} from "../title/Title";
 import {Indent} from "../indent/Indent";
 
-export class Home extends React.Component<any, any> {
-    render() {
-        return <HomePage>
-            <ContainerWrapper>
-                <Indent/>
-                <Title title="About platform"/>
-                <Indent/>
-            </ContainerWrapper>
-        </HomePage>
-    }
+export function Home(): JSX.Element {
+    return <HomePage>
+        <ContainerWrapper>
+            <Indent/>
+            <Title title="About platform"/>
+            <Indent/>
+        </ContainerWrapper>
+    </HomePage>
 }

@@ -1,19 +1,15 @@
 import React from "react";
 import {InputWrapper} from "./styled/InputWrapper";
 
-type InputProp = {
+interface InputProps {
     labelName: string,
     id: string,
     type: string,
     placeholder?: string
 }
-export class Input extends React.Component<InputProp, any> {
-    render() {
-        return <React.Fragment>
-            <InputWrapper>
-                <label htmlFor={this.props.id}>{this.props.labelName}</label>
-                <input placeholder={this.props.placeholder} type={this.props.type} id={this.props.id}/>
-            </InputWrapper>
-        </React.Fragment>
-    }
+export function Input(props: InputProps): JSX.Element {
+    return <InputWrapper>
+        <label htmlFor={props.id}>{props.labelName}</label>
+        <input placeholder={props.placeholder} type={props.type} id={props.id}/>
+    </InputWrapper>
 }
